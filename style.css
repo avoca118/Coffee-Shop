@@ -9,8 +9,7 @@
 :root{
     --hover--bg-color: #fcf3f3;
     --hover--text-color: #e77080;
-    --bg-color: linear-gradient(to bottom, #EE9CA7, #FFDDE1);
-    --sec-bg-color: linear-gradient(to left, #c15a5b, #FFE4E1);
+    --bg-color: #FFDDE1;
     --text-color: #000;
 }
 
@@ -78,20 +77,24 @@ nav .navlist ul{
     color: var(--text-color);
 }
 
-.navlist ul a:hover{
+.navlist ul a:hover,
+#home .more button:hover, 
+#about .text2 button:hover{
     background-color: var(--hover--bg-color);
     color: var(--hover--text-color);
 }
 
 #home{
     width: 100%;
-    height: 629px;
+    min-height: 629px;
     /* background-color: aqua; */
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: -40px;
+    padding-bottom: 0;
 }
 
 #home .text{
@@ -126,10 +129,13 @@ nav .navlist ul{
     width: 100%;
     height: 650px;
     /* margin-left: 100px; */
-    background: var(--sec-bg-color);  
-    
+    background: var(--bg-color);  
     display: flex;
     justify-content: center;
+    margin-top: -40px;
+    padding-top: 0;
+    margin-bottom: -80px;
+    padding-bottom: 0;
 }
 
 #about .text2{
@@ -158,35 +164,84 @@ nav .navlist ul{
 
 #menu{
     width: 100%;
-    height: 800px;
-    background-color: aqua;
+    height: 900px;
+    background: var(--bg-color);
+    margin-top: 0;
+    padding-top: 0;
 }
 
-.container{
-    width: 100%;
-    height: 300px;
-        background-color: burlywood;
+#menu h1{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-size: 2.1rem;
+}
 
+#menu .container, .container2{
+    width: 90%;
+    margin: 0 auto;
+    height: 400px;
     display: flex;
-
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    background-color: #FFE4E1;
+    border-radius: 20px;
+}
+
+#menu .container .box1, .box2, .box3{
+    width: 400px;
+    height: 350px;
+    margin: 0px 60px 70px 60px;
+    border-radius: 20px;
+    /* background-color: #e77080; */
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.box1, .box2, .box3{
+#menu .container2 .box4, .box5, .box6{
+    width: 400px;
+    height: 350px;
+    margin: 0px 60px 20px 60px;
+    border-radius: 20px;
+    /* background-color: #e77080; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#menu .container .box1 img, 
+#menu .container .box2 img, 
+#menu .container .box3 img,
+#menu .container2 .box4 img, 
+#menu .container2 .box5 img, 
+#menu .container2 .box6 img {
+    display: block;
+    margin: 20px auto 0 auto;
     width: 200px;
-        height: 100px;
+    height: 200px;
+    border-radius: 20px;
 }
 
-.box1{
-    background-color: red;
+#menu .container .box1 h2, 
+#menu .container .box2 h2,      
+#menu .container .box3 h2,
+#menu .container2 .box4 h2,
+#menu .container2 .box5 h2,
+#menu .container2 .box6 h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
 
-.box2{
-    background-color: yellowgreen;
-}
-
-.box3{
-    background-color: violet;
+#menu .container .box1 p,
+#menu .container .box2 p,
+#menu .container .box3 p,
+#menu .container2 .box4 p,
+#menu .container2 .box5 p,
+#menu .container2 .box6 p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 10px 20px;
 }
